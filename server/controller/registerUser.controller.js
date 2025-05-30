@@ -40,7 +40,4 @@ async function registerUrl(req, res) {
     }
 }
 
-
-
-
 export { registerUrl }

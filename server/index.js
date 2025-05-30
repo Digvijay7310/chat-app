@@ -3,6 +3,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import { connectDB } from './config/connectDB.js'
 import { router } from './routes/index.js'
+import cookieParser from 'cookie-parser'
 
 dotenv.config()
 
@@ -12,6 +13,7 @@ app.use(cors({
     credentials: true
 }))
 app.use(express.json())
+app.use(cookieParser())
 
 const PORT = process.env.PORT || 8000
 
